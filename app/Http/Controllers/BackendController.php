@@ -10,3 +10,4 @@ class BackendController extends Controller
         return view('Admin.backend_index');
     }
 }
+
