@@ -16,6 +16,15 @@
   <style>
     body {
     font-family: 'Noto Sans Bengali', sans-serif;
+  }
+  .action-buttons {
+    display: flex; /* আইকন গুলো এক লাইনে রাখবে */
+    gap: 5px; /* আইকন গুলোর মধ্যে 5px দূরত্ব থাকবে */
+  }
+  .add-notice-btn {
+    float: right; /* ডান পাশে সরিয়ে আনবে */
+    margin-top: -5px; /* নিচে কিছু জায়গা দিবে */
+    margin-bottom: 15px;
 }
   </style>
 </head>

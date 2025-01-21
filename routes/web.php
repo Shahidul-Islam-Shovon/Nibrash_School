@@ -20,3 +20,9 @@ Route::get('/featured-news', [FeaturedNewsController::class, 'show_form'])->name
 Route::post('/featured-news-insert', [FeaturedNewsController::class, 'insert_news'])->name('featured_news.insert');
 
 Route::get('/featured-news', [FeaturedNewsController::class, 'show_news'])->name('featured_news.form');
+
+Route::get('/featured-news/edit/{id}', [FeaturedNewsController::class, 'edit_news'])->name('featured_news.edit');
+
+Route::post('/featured-news/update/{id}', [FeaturedNewsController::class, 'update_news'])->name('featured_news.update');
+
+Route::delete('/featured-news/delete/{id}', [FeaturedNewsController::class, 'destroy_news'])->name('notice.destroy');
