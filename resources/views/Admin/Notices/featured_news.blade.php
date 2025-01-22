@@ -61,7 +61,7 @@ Add Featured News
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($show_notice as $key => $notice)
+                    @foreach ($show_notice as $key => $notice)
                         <tr>
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $notice->notice_headline }}</td>
@@ -88,11 +88,7 @@ Add Featured News
                                 </form>
                             </td>
                         </tr>
-                    @empty
-                    <tr>
-                        <td class="text-center" colspan="6">আপাতত কোন নোটিশ নেই !</td>
-                    </tr>
-                    @endforelse
+                    @endforeach
                 </tbody>
             </table>
 

@@ -27,7 +27,7 @@ class UpcomingEventsController extends Controller
         if ($request->hasFile('event_image')) {
             $image = $request->file('event_image');
             $image_name = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('storage/Images'), $image_name);
+            $image->move(public_path('storage/Events'), $image_name);
             $event->event_image = $image_name;
         }
 

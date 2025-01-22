@@ -67,7 +67,7 @@ class FeaturedNewsController extends Controller
         // নতুন ছবি থাকলে আপলোড করা
         if ($request->hasFile('notice_image')) {
             $imageName = time() . '.' . $request->notice_image->extension();
-            $request->notice_image->storeAs('public/Images', $imageName);
+            $request->notice_image->storeAs('public/Notices', $imageName);
             $notice->notice_image = $imageName;
         }
 
@@ -85,7 +85,7 @@ class FeaturedNewsController extends Controller
 
         // যদি ইমেজ থেকে থাকে তবে ডিলিট করব
         if ($notice->notice_image) {
-            $imagePath = public_path('storage/Images/' . $notice->notice_image);
+            $imagePath = public_path('storage/Notices/' . $notice->notice_image);
             if (file_exists($imagePath)) {
                 unlink($imagePath);
             }

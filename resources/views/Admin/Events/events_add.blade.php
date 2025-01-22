@@ -65,7 +65,7 @@ Upcoming Events
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse($all_events as $key => $event)
+                    @foreach($all_events as $key => $event)
                     <tr>
                         <td>{{$key + 1}}</td>
                         <td>{{$event->event_headline}}</td>
@@ -92,14 +92,9 @@ Upcoming Events
                                 </button>
                             </form>
                         </td>
-                    </tr>
-                    @empty 
-                    <tr>
-                        <td class="text-center" colspan="6">আপাতত কোন ইভেন্টস নেই !</td>
-                    </tr>
-                    @endforelse
+                    </tr> 
+                    @endforeach
                 </tbody>
-                
             </table>  
         </div>
     </div>
