@@ -78,6 +78,7 @@ Add Featured News
                                 <a href="{{ route('featured_news.edit', encrypt($notice->id),$notice->id) }}" class="btn btn-warning btn-sm">
                                     <i class="fa fa-edit"></i>
                                 </a>
+                                
                                 <form action="{{ route('notice.destroy', encrypt($notice->id),$notice->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')

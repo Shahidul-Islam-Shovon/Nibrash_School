@@ -34,3 +34,9 @@ Route::delete('/featured-news/delete/{id}', [FeaturedNewsController::class, 'des
 Route::get('/upcoming_events', [UpcomingEventsController::class, 'show_form'])->name('events.show.form');
 
 Route::post('/upcoming_events/store', [UpcomingEventsController::class, 'store_form'])->name('events.store');
+
+Route::get('/upcoming_events', [UpcomingEventsController::class, 'show_all_events'])->name('events.show.form');
+
+Route::get('/upcoming_events/edit/{id}', [UpcomingEventsController::class, 'edit_events'])->name('events.edit.form');
+
+Route::delete('/upcoming_events/destroy/{id}', [UpcomingEventsController::class, 'destroy_events'])->name('event.destroy');

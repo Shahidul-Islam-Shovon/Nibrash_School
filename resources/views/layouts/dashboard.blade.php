@@ -30,10 +30,17 @@
         div.dt-container {
             position: relative;
             clear: both;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         .alert-dismissible{
           margin-top: 28px;
+        }
+        table thead tr{
+          background-color: rgba(102, 102, 102, 0.87);
+          padding: 15px;
+        }
+        .dt-column-title{
+          color: rgb(243, 243, 243);
         }
     </style>
 </head>

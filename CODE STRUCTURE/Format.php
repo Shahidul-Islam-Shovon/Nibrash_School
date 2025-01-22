@@ -54,53 +54,15 @@ Upcoming Events
 
             {{-- show in a table --}}
             <table id="myTable" class="table table-striped">
-                <thead>
-                    <tr>
-                        <td>Sl.</td>
-                        <td>ইভেন্ট শিরোনাম</td>
-                        <td>ইভেন্ট বিস্তারিত</td>
-                        <td>ছবি</td>
-                        <td>ক্রিয়েটেড</td>
-                        <td>একশন</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse($all_events as $key => $event)
-                    <tr>
-                        <td>{{$key + 1}}</td>
-                        <td>{{$event->event_headline}}</td>
-                        <td>{{$event->event}}</td>
-                        <td>
-                            @if ($event->event_image)
-                                    <img src="{{ asset('storage/Images/'.$event->event_image) }}" width="70">
-                            @else
-                                    <span>কোনো ছবি নেই</span>
-                             @endif
-                        </td>
-                        <td>{{ $event->created_at->format('d M, Y') }}</td>
-                        <td>
-                            {{-- edit icon --}}
-                            <a href="{{ route('events.edit.form', encrypt($event->id),$event->id) }}" class="btn btn-warning btn-sm">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            {{-- delete icon with form --}}
-                            <form action="{{ route('event.destroy', encrypt($event->id),$event->id) }}" method="POST" class="d-inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('আপনি কি সত্যিই ডিলিট করতে চান?');">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    @empty 
-                    <tr>
-                        <td class="text-center" colspan="6">আপাতত কোন ইভেন্টস নেই !</td>
-                    </tr>
-                    @endforelse
-                </tbody>
-                
+				<thead>
+					<tr>
+					  <td>#</td>
+					  <td>#</td>
+					  <td>#</td>
+					</tr>
+				</thead>
             </table>  
+
         </div>
     </div>
 </div>
