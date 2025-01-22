@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class FeaturedNewsController extends Controller
 {
     public function show_form(){
-        return view('Admin.featured_news');
+        return view('Admin.Notices.featured_news');
     }
 
     public function insert_news(Request $request)
@@ -41,10 +41,9 @@ class FeaturedNewsController extends Controller
     
     }
 
-
     public function show_news(){
         $show_notice = Notice::latest()->paginate(5);
-        return view('Admin.featured_news', [
+        return view('Admin.Notices.featured_news', [
             'show_notice' => $show_notice,
         ]);
     }
@@ -52,7 +51,7 @@ class FeaturedNewsController extends Controller
     public function edit_news($encryptedId){
         $id = decrypt($encryptedId);
         $notice = Notice::findOrFail($id);
-        return view('Admin.featured_news_edit', compact('notice'));
+        return view('Admin.Notices.featured_news_edit', compact('notice'));
     }
 
 
@@ -96,7 +95,5 @@ class FeaturedNewsController extends Controller
         $notice->delete();
 
         return back()->with('delete_success', 'নোটিশ সফলভাবে মুছে ফেলা হয়েছে!');
-    }
-
-    
+    }   
 }

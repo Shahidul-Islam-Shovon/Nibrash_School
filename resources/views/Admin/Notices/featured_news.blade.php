@@ -49,7 +49,7 @@ Add Featured News
             @endif
 
             <!-- Notice Table -->
-            <table class="table table-striped mt-3">
+            <table id="myTable" class="table table-striped">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -68,7 +68,7 @@ Add Featured News
                             <td>{{ $notice->notice }}</td>
                             <td>
                                 @if ($notice->notice_image)
-                                    <img src="{{ asset('storage/Images/'.$notice->notice_image) }}" width="100">
+                                    <img src="{{ asset('storage/Images/'.$notice->notice_image) }}" width="70">
                                 @else
                                     <span>কোনো ছবি নেই</span>
                                 @endif

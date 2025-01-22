@@ -6,27 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- DataTables CSS -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.css" />
 
   <link rel="shortcut icon" type="image/png" href="{{asset('backend/images/logos/logos.jpg')}}" />
 
   <link rel="stylesheet" href="{{asset('backend/css/styles.min.css')}}" />
-  <style>
-    body {
-    font-family: 'Noto Sans Bengali', sans-serif;
-  }
-  .action-buttons {
-    display: flex; /* আইকন গুলো এক লাইনে রাখবে */
-    gap: 5px; /* আইকন গুলোর মধ্যে 5px দূরত্ব থাকবে */
-  }
-  .add-notice-btn {
-    float: right; /* ডান পাশে সরিয়ে আনবে */
-    margin-top: -5px; /* নিচে কিছু জায়গা দিবে */
-    margin-bottom: 15px;
-}
-  </style>
+    <style>
+            body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+          }
+          .action-buttons {
+            display: flex; /* আইকন গুলো এক লাইনে রাখবে */
+            gap: 5px; /* আইকন গুলোর মধ্যে 5px দূরত্ব থাকবে */
+          }
+          .add-notice-btn {
+            float: right; /* ডান পাশে সরিয়ে আনবে */
+            margin-top: -5px; /* নিচে কিছু জায়গা দিবে */
+            
+        }
+        div.dt-container {
+            position: relative;
+            clear: both;
+            margin-top: 50px;
+        }
+        .alert-dismissible{
+          margin-top: 28px;
+        }
+    </style>
 </head>
 
 <body>
@@ -86,7 +95,7 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="{{route('events.show.form')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -175,19 +184,6 @@
     </div>
   </div>
 
-  <!-- jQuery (Required for DataTables) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <!-- DataTables JS -->
-  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-
-  <script>
-      $(document).ready( function () {
-          $('#noticeTable').DataTable(); // DataTable Active করা
-      });
-  </script>
 
   <script src="{{asset('backend/libs/jquery/dist/jquery.min.js')}}"></script>
   <script src="{{asset('backend/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
@@ -195,10 +191,17 @@
   <script src="{{asset('backend/js/app.min.js')}}"></script>
   <script src="{{asset('backend/libs/simplebar/dist/simplebar.js')}}"></script>
 
+  <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+
+  <script>
+      $(document).ready( function () {
+        $('#myTable').DataTable();
+      });
+  </script>
+
   @yield('custom_js')
 
 
 </body>
-
 </html>
 

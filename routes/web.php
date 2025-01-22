@@ -4,6 +4,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\FeaturedNewsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UpcomingEventsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,10 @@ Route::get('/featured-news/edit/{id}', [FeaturedNewsController::class, 'edit_new
 Route::post('/featured-news/update/{id}', [FeaturedNewsController::class, 'update_news'])->name('featured_news.update');
 
 Route::delete('/featured-news/delete/{id}', [FeaturedNewsController::class, 'destroy_news'])->name('notice.destroy');
+
+
+//upcoming events
+
+Route::get('/upcoming_events', [UpcomingEventsController::class, 'show_form'])->name('events.show.form');
+
+Route::post('/upcoming_events/store', [UpcomingEventsController::class, 'store_form'])->name('events.store');
