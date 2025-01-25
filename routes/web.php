@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BackendController;
+use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\FeaturedNewsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\HomeController;
@@ -46,4 +47,8 @@ Route::delete('/upcoming_events/destroy/{id}', [UpcomingEventsController::class,
 
 
 // student Enroll Form
+Route::get('/enrollments', [EnrollmentController::class, 'index'])->name('enrollments.index'); // শিক্ষার্থীদের তালিকা দেখাবে
 
+Route::post('/enroll', [EnrollmentController::class, 'store'])->name('enroll.store'); // নতুন শিক্ষার্থী এনরোল করবে
+
+Route::get('/enrollment/{id}', [EnrollmentController::class, 'show'])->name('enrollment.show'); // নির্দিষ্ট শিক্ষার্থীর তথ্য দেখাবে

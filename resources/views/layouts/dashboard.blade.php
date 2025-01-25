@@ -35,13 +35,6 @@
         .alert-dismissible{
           margin-top: 28px;
         }
-        table thead tr{
-          background-color: rgba(102, 102, 102, 0.87);
-          padding: 15px;
-        }
-        .dt-column-title{
-          color: rgb(243, 243, 243);
-        }
     </style>
 </head>
 
@@ -111,7 +104,7 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{route('students.create')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{route('enrollments.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
