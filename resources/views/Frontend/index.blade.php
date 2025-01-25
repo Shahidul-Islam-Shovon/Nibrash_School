@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>নিবরাস স্কুল</title>
+    <link rel="shortcut icon" href="{{asset('frontend/img/nibras_logo.jpg')}}" type="image/x-icon">
   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +65,7 @@
         <div class="container">
           <div class="navbar-header">
             <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
+              <a href="#"><i class="icon-dots-three-vertical ">sadsd</i></a>
             </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
