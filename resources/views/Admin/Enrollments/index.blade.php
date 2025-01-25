@@ -7,17 +7,23 @@ Enrolled Students
 
 @section('content')
 <div class="container">
-    <h4 class="mb-3">এনরোল করা শিক্ষার্থীদের সংখ্যা 
-        <span class="badge bg-danger" id="unread-count">{{ $unreadCount }}</span>
-    </h4>
-
+    
     <!-- Student List -->
-    <table id="myTable" class="table table-hover table-bordered">
+   <div class="card">
+    <div class="card-header">
+        <h4 class="mb-3">এনরোল করা শিক্ষার্থীদের সংখ্যা 
+        <span class="badge bg-danger" id="unread-count">{{ $unreadCount .  ' জন অপেক্ষমান আছেন' }} </span>
+    </h4>
+    <h5 style="font-weight: 800; color:rgba(255, 0, 0, 0.705)">শিক্ষার্থীর বিস্তারিত তথ্যর জন্য নামে ক্লিক করুন</h5>
+
+    </div>
+    <div class="card-body shadow-lg p-3 mb-5 bg-white rounded">
+         <table id="myTable" class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
                 <th>SL</th>
                 <th>নাম</th>
-                <th>শ্রেণি</th>
+                <th>যে শ্রেণিতে ভর্তি হতে চায়</th>
                 <th>ফোন নাম্বার</th>
                 <th>বর্তমান অবস্থা </th>
             </tr>
@@ -40,10 +46,13 @@ Enrolled Students
             @endforeach
         </tbody>
     </table>
+    </div>
+   </div>
 
     <!-- Student Details -->
-    <div id="student-details" class="mt-4 card p-3 shadow-sm" style="display: none;">
-        <h4>Student Details</h4>
+    <div id="student-details" class="mt-4 p-3 shadow-sm" style="display: none;">
+        <h4>শিক্ষার্থীর সম্পূর্ণ তথ্য</h4>
+        <hr>
         <p><strong>Name:</strong> <span id="s-name"></span></p>
         <p><strong>Class:</strong> <span id="s-class"></span></p>
         <p><strong>Father's Name:</strong> <span id="s-father"></span></p>
@@ -77,44 +86,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // টেবিলের স্টাইল পরিবর্তন করা (AJAX Update)
                     let row = document.querySelector(`.student-row[data-id='${studentId}']`);
-                    row.classList.remove('unread');
+                    row.classList.remove('unread'); // আনরিড রিমুভ করবো
                     row.querySelector('.status-text').innerText = 'Read';
 
-                    // নোটিফিকেশন সংখ্যা আপডেট
+                    // নোটিফিকেশন সংখ্যা আপডেট করা
                     let unreadCount = document.querySelectorAll('.unread').length;
                     document.getElementById('unread-count').innerText = unreadCount;
+
+                    // স্টাইল পরিবর্তন নিশ্চিত করা (ডায়নামিকভাবে CSS অ্যাপ্লাই)
+                    row.style.fontWeight = "normal";
+                    row.style.color = "#333"; // সাধারণ কালার
+                    row.style.backgroundColor = "transparent";
                 });
         });
     });
 });
+
 </script>
 
 <style>
-    /* আনরিড স্টাইল */
-    .unread {
-        font-weight: bold;
-        color: black;
-        background-color: #ffeeba; /* হালকা হলুদ ব্যাকগ্রাউন্ড */
-    }
+    /* আনরিড শিক্ষার্থীদের জন্য স্টাইল */
+.unread {
+    font-weight: 900 !important;
+    color: black !important;
+    background-color: #ffeeba !important;
+}
 
-    /* টেবিল স্টাইল */
-    .table {
-        border-radius: 10px;
-        overflow: hidden;
-    }
+/* টেবিল স্টাইল */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-    .table th {
-        text-align: center;
-    }
+.table th {
+    text-align: center;
+}
 
-    .table-hover tbody tr:hover {
-        background-color: #f1f1f1;
-        cursor: pointer;
-    }
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
 
-    /* ডিটেইলস বক্স */
-    .card {
-        background-color: #f8f9fa;
-    }
+/* টেবিলের ভেতরের টেক্সট কালো থাকবে */
+.unread td {
+    font-weight: 900 !important;
+    color: black !important;
+}
+.student-details{
+    color: black;
+}
+
+
 </style>
+
+
 @endsection
