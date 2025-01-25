@@ -72,7 +72,7 @@ Upcoming Events
                         <td>{{$event->event}}</td>
                         <td>
                             @if ($event->event_image)
-                                    <img src="{{ asset('storage/Images/'.$event->event_image) }}" width="70">
+                                    <img src="{{ asset('storage/Events/'.$event->event_image) }}" width="70">
                             @else
                                     <span>কোনো ছবি নেই</span>
                              @endif

@@ -39,4 +39,6 @@ Route::get('/upcoming_events', [UpcomingEventsController::class, 'show_all_event
 
 Route::get('/upcoming_events/edit/{id}', [UpcomingEventsController::class, 'edit_events'])->name('events.edit.form');
 
+Route::post('/upcoming_events/update/{id}', [UpcomingEventsController::class, 'update_events'])->name('events.update.form');
+
 Route::delete('/upcoming_events/destroy/{id}', [UpcomingEventsController::class, 'destroy_events'])->name('event.destroy');

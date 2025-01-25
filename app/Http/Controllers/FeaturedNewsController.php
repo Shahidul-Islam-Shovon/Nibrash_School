@@ -16,7 +16,7 @@ class FeaturedNewsController extends Controller
     {
         // **Validation Logic**
         $validatedData = $request->validate([
-            'notice_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'notice_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:4048',
             'notice_headline' => 'required|string|max:255',
             'notice' => 'required|string',
         ]);
@@ -59,15 +59,16 @@ class FeaturedNewsController extends Controller
         $request->validate([
             'notice_headline' => 'required',
             'notice' => 'required',
-            'notice_image' => 'image|mimes:jpg,png,jpeg,gif|max:2048'
+            'notice_image' => 'image|mimes:jpg,png,jpeg,gif|max:6048'
         ]);
 
         $notice = Notice::findOrFail($id);
 
         // নতুন ছবি থাকলে আপলোড করা
         if ($request->hasFile('notice_image')) {
+            $image = $request->file('notice_image');
             $imageName = time() . '.' . $request->notice_image->extension();
-            $request->notice_image->storeAs('public/Notices', $imageName);
+            $image->move(public_path('storage/Images'), $imageName);
             $notice->notice_image = $imageName;
         }
 
