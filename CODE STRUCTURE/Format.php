@@ -62,7 +62,6 @@ Upcoming Events
 					</tr>
 				</thead>
             </table>  
-
         </div>
     </div>
 </div>
