@@ -4,6 +4,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\FeaturedNewsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StudentEnrollController;
 use App\Http\Controllers\UpcomingEventsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,3 +43,7 @@ Route::get('/upcoming_events/edit/{id}', [UpcomingEventsController::class, 'edit
 Route::post('/upcoming_events/update/{id}', [UpcomingEventsController::class, 'update_events'])->name('events.update.form');
 
 Route::delete('/upcoming_events/destroy/{id}', [UpcomingEventsController::class, 'destroy_events'])->name('event.destroy');
+
+
+// student Enroll Form
+

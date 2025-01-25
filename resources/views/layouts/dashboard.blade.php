@@ -109,6 +109,15 @@
                 <span class="hide-menu">আপকামিং ইভেন্টস</span>
               </a>
             </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{route('students.create')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">এনরোল করা শিক্ষার্থীরা</span>
+              </a>
+            </li>
             {{-- menu copy end --}}
      
           </ul>       
@@ -139,6 +148,8 @@
               </a>
             </li>
           </ul>
+ 
+
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
               

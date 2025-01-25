@@ -31,14 +31,13 @@ class UpcomingEventsController extends Controller
             $event->event_image = $image_name;
         }
 
-        // ইভেন্টের অন্য ডাটা সেট করা
+        // set others value
         $event->event_headline = $validatedData['event_headline'];
         $event->event = $validatedData['event'];
 
-        // ডাটাবেজে সংরক্ষণ করা
+        // store in DB
         $event->save();
 
-        // ইউজারকে সফল মেসেজ সহ রিডাইরেক্ট করা
         return redirect()->back()->with('success', 'ইভেন্ট সফলভাবে যোগ হয়েছে!');
     }
 
@@ -62,7 +61,7 @@ class UpcomingEventsController extends Controller
 
         $event = Event::findOrFail($id);
 
-        // নতুন ছবি থাকলে আপলোড করা
+        // If new Picture Exists
         if ($request->hasFile('event_image')) {
             $image = $request->file('event_image');
             $imageName = time() . '.' . $request->event_image->extension();
@@ -71,7 +70,7 @@ class UpcomingEventsController extends Controller
             $event->event_image = $imageName;
         }
 
-        // ডাটা আপডেট করা
+        // data updating
         $event->event_headline = $request->event_headline;
         $event->event = $request->event;
         $event->save();
@@ -92,10 +91,7 @@ class UpcomingEventsController extends Controller
         }
 
         $find_event->delete();
-
         return back()->with('delete_success', 'ইভেন্ট সফলভাবে মুছে ফেলা হয়েছে!');
 
     }
-
-
 }
