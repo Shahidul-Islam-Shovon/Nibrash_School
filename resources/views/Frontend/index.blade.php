@@ -6,17 +6,17 @@
     <title>নিবরাস স্কুল</title>
     <link rel="shortcut icon" href="{{asset('frontend/img/nibras_logo.jpg')}}" type="image/x-icon">
   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  
 
     <link rel="stylesheet" href="{{asset('frontend/css/styles-merged.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
     <style>
-          body {
-            font-family: 'Noto Sans Bengali', sans-serif;
-            }
+          @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
+          body{
+            font-family: 'Hind Siliguri';
+          }
           .probootstrap-service-2 {
             padding: 20px;
             border-radius: 10px;
@@ -36,6 +36,9 @@
         }
         #jabbar{
             margin-left: 5%;
+        }
+        .probootstrap-teacher{
+          height: 245px;
         }
 
     </style>
@@ -65,7 +68,7 @@
         <div class="container">
           <div class="navbar-header">
             <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical ">sadsd</i></a>
+              <a href="#"><i class="icon-dots-three-vertical "></i></a>
             </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -105,7 +108,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Your Bright Future is Our Mission</h1>
+                    <h1 class="probootstrap-heading probootstrap-animate">শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গড়ে তোলাই আমাদের মিশন</h1>
                   </div>
                 </div>
               </div>
@@ -116,7 +119,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Education is Life</h1>
+                    <h1 class="probootstrap-heading probootstrap-animate">আমাদের শিক্ষার্থীরা নিয়ে আসে দারুন সব সাফল্য</h1>
                   </div>
                 </div>
               </div>
@@ -128,7 +131,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Helping Each of Our Students Fulfill the Potential</h1>
+                    <h1 class="probootstrap-heading probootstrap-animate">সবাই মিলে আমরা পড়ালেখা করি আনন্দের সাথে</h1>
                   </div>
                 </div>
               </div>
@@ -157,7 +160,7 @@
                   <p>
                     নিবরাস একটি আধুনিক মান সম্মত ইসলামি শরিয়াহ মোতাবেক স্কুল। এখানে ইলমে দ্বীন এবং প্রচলিত ধারার শিক্ষা দুটুই শিক্ষা দেয়া হয়। আমাদের আছেন অভিজ্ঞ শিক্ষক, যারা হাতে ধরে আমাদের প্রিয় শিক্ষার্থীদের পাঠদান করে থাকেন।
                   </p>
-                  <p><a href="#" class="btn btn-primary">আরও জানুন</a></p>
+                  <p><a href="#" class="btn btn-primary">ভর্তির জন্য আবেদন করুন</a></p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url({{asset('frontend/img/header_first.jpg')}}">
                   <a href="#"></a>
@@ -234,7 +237,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center section-heading probootstrap-animate">
-              <h2 class="mb0">আমাদের কার্যক্রম সমুহ</h2>
+              <h2 class="mb0">আমাদের কার্যক্রম</h2>
+              <br>
+              <h4 style="color:white" class="col-md-12 text-center section-heading probootstrap-animate">নোটিশ বোর্ড এবং আসন্ন ইভেন্ট'স সমূহ</h4>
             </div>
           </div>
         </div>
@@ -278,7 +283,7 @@
                   <!-- END row -->
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">View all news</a></p>  
+                      <p><a href="#" class="btn btn-primary">সকল নোটিশ দেখুন</a></p>  
                     </div>
                   </div>
                 </div>
@@ -307,7 +312,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">View all events</a></p>  
+                      <p><a href="#" class="btn btn-primary">সকল ইভেন্ট দেখুন</a></p>  
                     </div>
                   </div>
                 </div>
@@ -417,86 +422,39 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Meet Our Qualified Teachers</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <h2>পরিচিত হোন আমাদের অভিজ্ঞ শিক্ষকদের সাথে</h2>
+              <p class="lead">আমাদের আছে একঝাক দক্ষ তরুন শিক্ষক যারা অতি যত্ন সহকারে আমাদের শিক্ষার্থীদের পাঠদান করে থাকেন</p>
             </div>
           </div>
           <!-- END row -->
 
           <div class="row">
+            @foreach($all_teachers as $teacher)
             <div class="col-md-3 col-sm-6">
               <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Chris Worth</h3>
-                  <p>Physical Education</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_5.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Janet Morris</h3>
-                  <p>English Teacher</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix visible-sm-block visible-xs-block"></div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_6.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Linda Reyez</h3>
-                  <p>Math Teacher</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_7.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Jessa Sy</h3>
-                  <p>Physics Teacher</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
 
+                <figure class="media">
+                  <img src="{{asset('storage/Teachers/'. $teacher->teacher_image)}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive" width="400" height="400">
+                </figure>
+
+                <div class="text">
+                  <h3 style="font-size: 17px;">{{$teacher->teacher_name}}</h3>
+                  <p>{{$teacher->designation}}</p>
+                  <ul class="probootstrap-footer-social">
+                    
+                    <li class="facebook"><a href="{{$teacher->facebook_link}}">ফেইসবুকঃ<i class="icon-facebook2"></i></a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+          
         </div>
       </section>
+
+
       <section class="probootstrap-section probootstrap-bg probootstrap-section-colored probootstrap-testimonial" style="background-image: url(img/slider_4.jpg);">
         <div class="container">
           <div class="row">

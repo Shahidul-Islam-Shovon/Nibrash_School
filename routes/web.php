@@ -6,6 +6,7 @@ use App\Http\Controllers\FeaturedNewsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentEnrollController;
+use App\Http\Controllers\TecherSectionController;
 use App\Http\Controllers\UpcomingEventsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -52,3 +53,12 @@ Route::get('/enrollments', [EnrollmentController::class, 'index'])->name('enroll
 Route::post('/enroll', [EnrollmentController::class, 'store'])->name('enroll.store'); // নতুন শিক্ষার্থী এনরোল করবে
 
 Route::get('/enrollment/{id}', [EnrollmentController::class, 'show'])->name('enrollment.show'); // নির্দিষ্ট শিক্ষার্থীর তথ্য দেখাবে
+
+// teacher manage
+Route::get('/teacher/create', [TecherSectionController::class, 'show_form'])->name('teacher.create'); 
+
+Route::post('/teacher/store', [TecherSectionController::class, 'store_form'])->name('teacher.store'); 
+
+Route::get('/teacher/edit/form/{id}', [TecherSectionController::class, 'edit_form'])->name('teacher.edit'); 
+
+Route::delete('/teacher/trash/{id}', [TecherSectionController::class, 'destroy_teacher'])->name('teacher.destroy'); 

@@ -111,6 +111,16 @@
                 <span class="hide-menu">এনরোল করা শিক্ষার্থীরা</span>
               </a>
             </li>
+
+            {{-- menu copy end --}}
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{route('teacher.create')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">শিক্ষক এড করুন</span>
+              </a>
+            </li>
             {{-- menu copy end --}}
      
           </ul>       
