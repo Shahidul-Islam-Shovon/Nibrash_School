@@ -56,15 +56,11 @@
               <span><i class="icon-phone2"></i>+880-1636463884</span>
               <span><i class="icon-mail"></i>developer@gmail.com</span>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-default probootstrap-navbar">
+      <nav class="navbar probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="btn-more js-btn-more visible-xs">
@@ -81,21 +77,11 @@
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="teachers.html">Teachers</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="active"><a href="index.html">হোম</a></li>
+              <li><a href="courses.html">ক্লাস ও ভর্তি</a></li>
+              <li><a href="teachers.html">শিক্ষক সমূহ</a></li>
+              <li><a href="events.html">নোটিশ</a></li>
+              <li><a href="contact.html">ইভেন্ট'স</a></li>
             </ul>
           </div>
         </div>
@@ -459,54 +445,36 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Alumni Testimonial</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <h2>আমাদের খুজে বের করুন গুগল ম্যাপ এ !</h2>
+              <p class="lead">গুগল ম্যাপ ব্যাবহার করে চলে আসুন আমাদের সুন্দর বিদ্যালয়ে</p>
             </div>
           </div>
-          <!-- END row -->
-          <div class="row">
-            <div class="col-md-12 probootstrap-animate">
-              <div class="owl-carousel owl-carousel-testimony owl-carousel-fullwidth">
-                <div class="item">
 
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="img/person_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author"> &mdash; <span>Mike Fisher</span></cite></blockquote>
-                  </div>
-
-                </div>
-                <div class="item">
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="img/person_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.&rdquo; <cite class="author"> &mdash;<span>Jorge Smith</span></cite></blockquote>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="img/person_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; <span>Brandon White</span></cite></blockquote>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
           <!-- END row -->
+          <div class="row text-center">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467959.9212256694!2d89.90860877343746!3d23.60659640000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b1002f6bb9b5%3A0x81a04218c354c0b!2sNibras%2Can%20islami%20modern%20school!5e0!3m2!1sen!2sbd!4v1737972722727!5m2!1sen!2sbd" 
+            width="100%" 
+            height="500" 
+            style="border:0; filter: brightness(1.2) contrast(1.1); opacity: 0.95;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+          <!-- END row -->
+
         </div>
       </section>
+
 
       <section class="probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Why Choose Enlight School</h2>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+              <h2>কেন নিবরাস স্কুল পছন্দ করবেন ?</h2>
+              <p class="lead">আমাদের কিছু সেরা দিকগুলু হচ্ছে - </p>
             </div>
           </div>
           <div class="row">
@@ -514,22 +482,25 @@
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Consectetur Adipisicing</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                  <h3>দ্বীনি ও আধুনিক শিক্ষার সমন্বয়</h3>
+                  <p>কুরআন, হাদিস ও ইসলামিক স্টাডিজের পাশাপাশি বিজ্ঞান, গণিত ও ভাষা শেখানো হয় পাশাপাশি
+                  কুরআন, হাদিস ও ইসলামিক স্টাডিজ, বিজ্ঞান, গণিত ও ভাষা শেখানো হয়</p>
                 </div>  
               </div>
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Aliquid Dolorum Saepe</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                  <h3>যোগ্য ও অভিজ্ঞ শিক্ষক মণ্ডলী</h3>
+                  <p>ইসলামি ও আধুনিক শিক্ষায় পারদর্শী শিক্ষকরা পাঠদান করেন সেই সাথে
+                  আদর্শ ও নৈতিক শিক্ষায় গুরুত্ব প্রদান করা হয়</p>
                 </div>
               </div>
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Eveniet Tempora Anisi</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                  <h3>আধুনিক প্রযুক্তিনির্ভর শিক্ষা</h3>
+                  <p> ডিজিটাল পাঠদান ব্যবস্থা ও 
+                  ভাল পাঠদানের সুবিধা রয়েছে</p>
                 </div>
               </div>
             </div>
@@ -537,25 +508,28 @@
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Laboriosam Quod Dignissimos</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                  <h3>উন্নত ও নিরাপদ পরিবেশ</h3>
+                  <p>শিশুদের জন্য নিরাপদ ও অনুকূল শিক্ষা পরিবেশ এবং
+                  শৃঙ্খলা ও নৈতিকতার উপর বিশেষ গুরুত্ব</p>
                 </div>  
               </div>
               
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Asperiores Maxime Modi</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+                  <h3>সহশিক্ষা কার্যক্রম</h3>
+                  <p>বিতর্ক, খেলাধুলা, হিফজ ও নাশিদ প্রতিযোগিতার আয়োজন
+                  নেতৃত্ব ও আত্মবিশ্বাস গড়ে তোলার সুযোগ</p>
                 </div>
               </div>
               
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
-                  <h3>Libero Maxime Molestiae</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
-                </div>
+                  <h3>সুন্দর ক্যাম্পাস ও সুব্যবস্থাপনা</h3>
+                  <p>প্রশস্ত ও পরিপাটি ক্যাম্পাস, স্বতন্ত্র নামাজের জায়গা
+                  </p>
+                </div>   
               </div>
 
             </div>
@@ -564,6 +538,7 @@
         </div>
       </section>
       
+      {{-- due section --}}
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -574,43 +549,42 @@
           </div>
         </div>
       </section>
+
+
       <footer class="probootstrap-footer probootstrap-bg">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
-                <h3>Social</h3>
+                <h3>স্কুল সম্পর্কে</h3>
+                <p>নিবরাস একটি আধুনিক মান সম্মত ইসলামি শরিয়াহ মোতাবেক স্কুল। এখানে ইলমে দ্বীন এবং প্রচলিত ধারার শিক্ষা দুটুই শিক্ষা দেয়া হয়। আমাদের আছেন অভিজ্ঞ শিক্ষক, যারা হাতে ধরে আমাদের প্রিয় শিক্ষার্থীদের পাঠদান করে থাকেন।</p>
+
+                <h3>সামাজিক মাধ্যমে আমরা</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
                   <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-github"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-3 col-md-push-1">
               <div class="probootstrap-footer-widget">
-                <h3>Links</h3>
+                <h3>গুরুত্বপূর্ণ লিঙ্কস-</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Teachers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">হোম</a></li>
+                  <li><a href="#">শিক্ষকসমূহ</a></li>
+                  <li><a href="#">নোটিশ</a></li>
+                  <li><a href="#">ইভেন্ট'স</a></li>
+                  <li><a href="#">যোগাযোগ</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>Contact Info</h3>
+                <h3>যোগাযোগ করুন</h3>
                 <ul class="probootstrap-contact-info">
-                  <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-                  <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-                  <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+                  <li><i class="icon-location2"></i> <span>কাশিপুর ঢালীবাড়ি সংলগ্ন, কাশীপুর, ফতুল্লা, নারায়নগঞ্জ</span></li>
+                  <li><i class="icon-mail"></i><span>developer@gmail.com</span></li>
+                  <li><i class="icon-phone2"></i><span>+88016-364638-84</span></li>
                 </ul>
               </div>
             </div>
@@ -624,10 +598,10 @@
           <div class="container">
             <div class="row">
               <div class="col-md-8 text-left">
-                <p>&copy; 2017 <a href="https://probootstrap.com/">ProBootstrap:Enlight</a>. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://probootstrap.com/">ProBootstrap.com</a></p>
+                <p>&copy; 2025 <a href="#">নিবরাস স্কুল</a>. সকল সত্ত্ব সংরক্ষিত. ডিজাইন &amp; ডেভেলোপ বাই  <a href="https://www.facebook.com/shahidulislam.khan.9279" target="__blank">Shahidul Islam Shovon</a></p>
               </div>
               <div class="col-md-4 probootstrap-back-to-top">
-                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+                <p><a href="#" class="js-backtotop">উপরে যান <i class="icon-arrow-long-up"></i></a></p>
               </div>
             </div>
           </div>
@@ -636,8 +610,7 @@
 
     </div>
     <!-- END wrapper -->
-    
-
+  
     <script src="{{asset('frontend/js/scripts.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.min.js')}}"></script>
     <script src="{{asset('frontend/js/custom.js')}}"></script>
