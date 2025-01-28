@@ -62,3 +62,5 @@ Route::post('/teacher/store', [TecherSectionController::class, 'store_form'])->n
 Route::get('/teacher/edit/form/{id}', [TecherSectionController::class, 'edit_form'])->name('teacher.edit'); 
 
 Route::delete('/teacher/trash/{id}', [TecherSectionController::class, 'destroy_teacher'])->name('teacher.destroy'); 
+
+

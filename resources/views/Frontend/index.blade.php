@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>নিবরাস স্কুল</title>
     <link rel="shortcut icon" href="{{asset('frontend/img/nibras_logo.jpg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   
-  
-
     <link rel="stylesheet" href="{{asset('frontend/css/styles-merged.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
@@ -17,7 +16,14 @@
           body{
             font-family: 'Hind Siliguri';
           }
-          .probootstrap-service-2 {
+          .navbar-brand::before {
+            display: none;
+          }
+          .navbar-brand img {
+            display: block;
+            max-height: 40px;
+          }
+            .probootstrap-service-2 {
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -40,6 +46,19 @@
         .probootstrap-teacher{
           height: 245px;
         }
+        .swal2-popup {
+        font-size: 18px !important; /* ফন্ট বড় করবে */
+        }
+        .swal2-title {
+            font-size: 22px !important; /* শিরোনামের ফন্ট বড় করবে */
+        }
+        .swal2-content {
+            font-size: 18px !important; /* মেসেজের ফন্ট বড় করবে */
+        }
+        .swal2-confirm {
+            font-size: 16px !important; /* বাটনের ফন্ট বড় করবে */
+            padding: 10px 20px !important;
+        }
 
     </style>
   </head>
@@ -60,7 +79,8 @@
           </div>
         </div>
       </div>
-      <nav class="navbar probootstrap-navbar">
+
+      <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="btn-more js-btn-more visible-xs">
@@ -72,20 +92,25 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            
+
+            <!-- লোগো বসানোর জন্য নিচের অংশ পরিবর্তন -->
+            <a class="navbar-brand" href="index.html">
+              <img src="{{asset('frontend/img/nibras_logo.jpg')}}" alt="নিবরাস স্কুল" style="height: 40px;">
+            </a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="index.html">হোম</a></li>
-              <li><a href="courses.html">ক্লাস ও ভর্তি</a></li>
-              <li><a href="teachers.html">শিক্ষক সমূহ</a></li>
-              <li><a href="events.html">নোটিশ</a></li>
-              <li><a href="contact.html">ইভেন্ট'স</a></li>
+              <li><a href="courses.html">শিক্ষকসমূহ</a></li>
+              <li><a href="teachers.html">নোটিশ</a></li>
+              <li><a href="events.html">ইভেন্টস</a></li>
+              <li><a href="events.html">যোগাযোগ</a></li>
             </ul>
           </div>
         </div>
       </nav>
+
 
       <section class="flexslider">
         <ul class="slides">
@@ -538,16 +563,78 @@
         </div>
       </section>
       
-      {{-- due section --}}
+          <!-- ভর্তি section -->
       <section class="probootstrap-cta">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
-              <a href="#" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
-            </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">এখনই আপনার ভর্তি নিশ্চিত করুন</h2>
+
+                      <button type="button" class="btn btn-outline-dark btn-primary" data-toggle="modal" data-target="#admissionModal">
+                          ভর্তি ফর্ম
+                      </button>
+
+                      <!-- Modal শুরু -->
+                      <div class="modal fade" id="admissionModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px;">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="modalTitle"><h4 class="text-danger"><b>শিক্ষার্থী ভর্তি ফর্ম</b></h4></h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <form id="admissionForm" action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data">
+                                          @csrf  
+
+                                          <div class="form-group">
+                                              <label for="name" style="color: #333; font-weight: 600;">শিক্ষার্থীর নাম</label>
+                                              <input type="text" class="form-control" id="name" name="name" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="class_want_to_admission" style="color: #333; font-weight: 600;">যে ক্লাসে ভর্তি হতে ইচ্ছুক</label>
+                                              <input type="text" class="form-control" id="class_want_to_admission" name="class_want_to_admission" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="father_name" style="color: #333; font-weight: 600;">বাবার নাম</label>
+                                              <input type="text" class="form-control" id="father_name" name="father_name" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="mother_name" style="color: #333; font-weight: 600;">মায়ের নাম</label>
+                                              <input type="text" class="form-control" id="mother_name" name="mother_name" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="date_of_birth" style="color: #333; font-weight: 600;">জন্ম তারিখ</label>
+                                              <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="address" style="color: #333; font-weight: 600;">ঠিকানা</label>
+                                              <input type="text" class="form-control" id="address" name="address" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="phone_number" style="color: #333; font-weight: 600;">ফোন নাম্বার</label>
+                                              <input type="number" class="form-control" id="phone_number" name="phone_number" required>
+                                          </div>
+
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-danger" data-dismiss="modal">কেনসেল করুন</button>
+                                              <button type="submit" class="btn btn-success">ফর্ম জমা দিন</button>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> <!-- Modal শেষ -->
+                  </div>
+              </div>
           </div>
-        </div>
       </section>
 
 
@@ -611,9 +698,53 @@
     </div>
     <!-- END wrapper -->
   
+    <!-- Bootstrap 4 এর জন্য প্রয়োজনীয় jQuery এবং JS -->
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+
     <script src="{{asset('frontend/js/scripts.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.min.js')}}"></script>
     <script src="{{asset('frontend/js/custom.js')}}"></script>
+
+    <script>
+    $(document).ready(function () {
+        $("#admissionForm").submit(function (event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    Swal.fire({
+                        title: "🎉 সফল!",
+                        text: "আপনার ভর্তি আবেদন সফলভাবে জমা হয়েছে!",
+                        icon: "success",
+                        confirmButtonText: "ঠিক আছে",
+                    });
+
+                    $("#admissionModal").modal("hide");
+                    $("#admissionForm")[0].reset();
+                },
+                error: function (xhr, status, error) {
+                    Swal.fire({
+                        title: "❌ ত্রুটি!",
+                        text: "কিছু সমস্যা হয়েছে। আবার চেষ্টা করুন।",
+                        icon: "error",
+                        confirmButtonText: "ঠিক আছে",
+                    });
+                }
+            });
+        });
+    });
+    document.querySelector('.navbar-brand::before')?.remove();
+</script>
 
   </body>
 </html>
