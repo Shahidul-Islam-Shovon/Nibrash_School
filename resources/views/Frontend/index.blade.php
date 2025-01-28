@@ -95,7 +95,7 @@
 
             <!-- লোগো বসানোর জন্য নিচের অংশ পরিবর্তন -->
             <a class="navbar-brand" href="index.html">
-              <img src="{{asset('frontend/img/nibras_logo.jpg')}}" alt="নিবরাস স্কুল" style="height: 40px;">
+              <img src="{{asset('frontend/img/nibras_logo.jpg')}}" alt="নিবরাস স্কুল" style="width: 50px; height:50px;">
             </a>
           </div>
 
