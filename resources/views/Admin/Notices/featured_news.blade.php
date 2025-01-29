@@ -65,7 +65,7 @@ Add Featured News
                         <tr>
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $notice->notice_headline }}</td>
-                            <td>{{ $notice->notice }}</td>
+                            <td>{{ Str::limit($notice->notice), 80 }}</td>
                             <td>
                                 @if ($notice->notice_image)
                                     <img src="{{ asset('storage/Images/'.$notice->notice_image) }}" width="70">

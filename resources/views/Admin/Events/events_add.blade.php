@@ -69,7 +69,7 @@ Upcoming Events
                     <tr>
                         <td>{{$key + 1}}</td>
                         <td>{{$event->event_headline}}</td>
-                        <td>{{$event->event}}</td>
+                        <td>{{Str::limit($event->event), 80}}</td>
                         <td>
                             @if ($event->event_image)
                                     <img src="{{ asset('storage/Events/'.$event->event_image) }}" width="70">

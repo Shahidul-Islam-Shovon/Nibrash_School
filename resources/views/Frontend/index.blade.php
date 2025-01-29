@@ -92,29 +92,26 @@
                         {{-- start item --}}
 
                         @foreach($all_notice as $notice)
-                        <div class="item">
-                          <a href="#" class="probootstrap-featured-news-box">
-
+                        <div class="card">
+                        
                             <figure class="probootstrap-media"><img src="{{asset('storage/Images/'.$notice->notice_image)}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
 
-                            <div class="probootstrap-text">
-                              <h3><b>{{$notice->notice_headline}}</b></h3>
-                              <p>{{$notice->notice}}</p>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>{{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }}</span>
-                            </div>
-                          </a>
+                            <div class="card-body">
+                              <div class="">
+                                <p style="font-size: 21px;margin-top:20px;">{{$notice->notice_headline}}</p>
+                              <p>{{ Str::limit($notice->notice, 60)}}</p>
+
+                              <a href="{{ route('see_page.notices.single', encrypt($notice->id), $notice->id)}}#notice-section" class="text-blue-500 mt-2 block"><button style="margin-bottom:20px;" class="btn btn-primary">বিস্তারিত দেখুন</button></a>
+
+                              <span class="probootstrap-date">প্রকাশিতঃ <i class="icon-calendar"></i>{{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }} তারিখে</span>
+                              </div>                           
+                            </div>                         
                         </div>
                         @endforeach
-                        <!-- END item -->
+                        <!-- END item -->                        
                       </div>
                     </div>
-                  </div>
-                  <!-- END row -->
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">সকল নোটিশ দেখুন</a></p>  
-                    </div>
-                  </div>
+                  </div>                 
                 </div>
 
                 <div id="upcoming-events" class="tab-pane fade">
@@ -122,7 +119,7 @@
                     <div class="col-md-12">
                       <div class="owl-carousel" id="owl2">
                         {{-- start item --}}
-                        
+                      
                         @foreach($all_events as $event)
                         <div class="item">
                           <a href="#" class="probootstrap-featured-news-box">
@@ -315,7 +312,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>কেন নিবরাস স্কুল পছন্দ করবেন ?</h2>
+              <h3>কেন নিবরাস স্কুল পছন্দ করবেন ?</h3>
               <p class="lead">আমাদের কিছু সেরা দিকগুলু হচ্ছে - </p>
             </div>
           </div>

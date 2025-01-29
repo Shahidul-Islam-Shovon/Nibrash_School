@@ -14,11 +14,11 @@ Edit Notice
     <form action="{{ route('featured_news.update', $notice->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <label>শিরোনাম:</label>
+        <label>নোটিশ এর শিরোনাম</label>
         <input class="form-control" type="text" name="notice_headline" value="{{ $notice->notice_headline }}" required><br><br>
 
-        <label>বিবরণ:</label>
-        <textarea class="form-control" name="notice" required>{{ $notice->notice }}</textarea><br><br>
+        <label>বিস্তারিত নোটিশ</label>
+        <textarea class="form-control" name="notice" cols="10" rows="10" required>{{ !! $notice->notice !!}} </textarea><br><br>
 
         <label>বর্তমান ছবি:</label><br>
         @if ($notice->notice_image)

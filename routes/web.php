@@ -4,9 +4,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\FeaturedNewsController;
 use App\Http\Controllers\FrontEndController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InsidePageManageController;
-use App\Http\Controllers\StudentEnrollController;
 use App\Http\Controllers\TecherSectionController;
 use App\Http\Controllers\UpcomingEventsController;
 use Illuminate\Support\Facades\Auth;
@@ -67,4 +65,6 @@ Route::delete('/teacher/trash/{id}', [TecherSectionController::class, 'destroy_t
 
 // inside page linking 
 
-Route::get('/teachers-list/all', [InsidePageManageController::class, 'see_page'])->name('see_page.teachers');
+Route::get('/teachers-list/all', [InsidePageManageController::class, 'see_page_teacher'])->name('see_page.teachers');
+
+Route::get('/notice/single/{id}', [InsidePageManageController::class, 'single_notice'])->name('see_page.notices.single');
