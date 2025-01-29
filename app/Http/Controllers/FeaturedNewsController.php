@@ -59,7 +59,7 @@ class FeaturedNewsController extends Controller
         $request->validate([
             'notice_headline' => 'required',
             'notice' => 'required',
-            'notice_image' => 'image|mimes:jpg,png,jpeg,gif|max:6048'
+            'notice_image' => 'image|mimes:jpg,png,jpeg,gif,webp|max:10048'
         ]);
 
         $notice = Notice::findOrFail($id);

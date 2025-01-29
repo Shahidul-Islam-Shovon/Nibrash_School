@@ -139,6 +139,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script src="{{asset('frontend/js/scripts.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.min.js')}}"></script>
     <script src="{{asset('frontend/js/custom.js')}}"></script>
@@ -177,7 +179,26 @@
             });
         });
     });
+
     document.querySelector('.navbar-brand::before')?.remove();
+
+    $('#owl1').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    },
+    autoHeight: true,  // This can help with varying content heights
+});
+
 </script>
 
 </body>

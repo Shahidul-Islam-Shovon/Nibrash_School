@@ -80,38 +80,45 @@
         </div>
       </section>
 
-      <section class="probootstrap-section probootstrap-section">
+      <section id="backToHome" class="probootstrap-section probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="tab-content">
                 <div id="featured-news" class="tab-pane fade in active">
+
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="owl-carousel" id="owl1">
-                        {{-- start item --}}
+                        <div class="owl-carousel" id="owl1">
+                            @foreach($all_notice as $notice)
+                                <div class="card shadow-lg rounded-lg" style="min-height: 400px; max-width: 320px; margin: 10px;">
+                                    {{-- Image Section --}}
+                                    @if(!empty($notice->notice_image))
+                                        <img src="{{ asset('storage/Images/' . $notice->notice_image) }}" alt="Notice Image" class="card-img-top" style="max-height: 180px; object-fit: cover;">
+                                    @else
+                                        <div class="text-center p-4 bg-light">কোন ছবি আপলোড করা হয় নি</div>
+                                    @endif
 
-                        @foreach($all_notice as $notice)
-                        <div class="card">
-                        
-                            <figure class="probootstrap-media"><img src="{{asset('storage/Images/'.$notice->notice_image)}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                                    {{-- Card Body Section --}}
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title" style="font-size: 18px; margin-top:25px;">{{ $notice->notice_headline }}</h5>
+                                        
+                                        <p class="card-text text-muted mb-3">
+                                            {{ Str::limit($notice->notice, 80) }}
+                                        </p>
 
-                            <div class="card-body">
-                              <div class="">
-                                <p style="font-size: 21px;margin-top:20px;">{{$notice->notice_headline}}</p>
-                              <p>{{ Str::limit($notice->notice, 60)}}</p>
+                                        <a href="{{ route('see_page.notices.single', encrypt($notice->id)) }}#notice-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
 
-                              <a href="{{ route('see_page.notices.single', encrypt($notice->id), $notice->id)}}#notice-section" class="text-blue-500 mt-2 block"><button style="margin-bottom:20px;" class="btn btn-primary">বিস্তারিত দেখুন</button></a>
-
-                              <span class="probootstrap-date">প্রকাশিতঃ <i class="icon-calendar"></i>{{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }} তারিখে</span>
-                              </div>                           
-                            </div>                         
+                                        <small style="margin-top: 18px;" class="text-muted mt-2 d-block">
+                                            প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }} তারিখে
+                                        </small>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                        @endforeach
-                        <!-- END item -->                        
-                      </div>
                     </div>
-                  </div>                 
+                </div>
+
                 </div>
 
                 <div id="upcoming-events" class="tab-pane fade">
@@ -306,7 +313,6 @@
 
         </div>
       </section>
-
 
       <section class="probootstrap-section">
         <div class="container">

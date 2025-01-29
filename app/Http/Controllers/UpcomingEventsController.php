@@ -56,7 +56,7 @@ class UpcomingEventsController extends Controller
         $request->validate([
             'event_headline' => 'required',
             'event' => 'required',
-            'event_image' => 'image|mimes:jpg,png,jpeg,gif|max:6048'
+            'event_image' => 'image|mimes:jpg,png,jpeg,gif,webp|max:9048'
         ]);
 
         $event = Event::findOrFail($id);

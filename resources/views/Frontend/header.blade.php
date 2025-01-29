@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="{{asset('frontend/img/nibras_logo.jpg')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
@@ -14,73 +17,11 @@
     <link rel="stylesheet" href="{{asset('frontend/css/styles-merged.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/all_inline.css')}}">
     <style>
-         
-          body{
-            font-family: 'Noto Serif Bengali';
-            font-weight: 600;
-            color: rgba(0, 0, 0, 0.849)
-          }
-          body p span{
-            font-size: 17.5px;
-          }
-          .navbar-brand::before {
-            display: none;
-          }
-          .navbar-brand img {
-            display: block;
-            max-height: 40px;
-          }
-            .probootstrap-service-2 {
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            background: #f8f9fa;
-            margin-bottom: 20px;
-            text-align: center;
-            width: 100%;
-            max-width: 400px; /* প্রতিটি Card এর Width ঠিক রাখার জন্য */
-        }
-        .probootstrap-service-2 .text {
-            text-align: center;
-        }
-        .btn-primary {
-            border-radius: 20px;
-            font-weight: bold;
-        }
-        #jabbar{
-            margin-left: 5%;
-        }
-        .probootstrap-teacher{
-          height: 245px;
-        }
-        .swal2-popup {
-        font-size: 18px !important; /* ফন্ট বড় করবে */
-        }
-        .swal2-title {
-            font-size: 22px !important; /* শিরোনামের ফন্ট বড় করবে */
-        }
-        .swal2-content {
-            font-size: 18px !important; /* মেসেজের ফন্ট বড় করবে */
-        }
-        .swal2-confirm {
-            font-size: 16px !important; /* বাটনের ফন্ট বড় করবে */
-            padding: 10px 20px !important;
-        }
-        .card {
-          border: 1px solid #ddd;
-          padding: 15px;
-          margin: 10px;
-          border-radius: 10px;
-          background-color: #ffffff;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .card img {
-          border-radius: 8px;
-        }
-        html {
-        scroll-behavior: smooth;
-      }
+        
+
     </style>
   </head>
   <body>

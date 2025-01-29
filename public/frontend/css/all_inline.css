@@ -1,0 +1,108 @@
+ body {
+     font-family: 'Noto Serif Bengali';
+     font-weight: 600;
+     color: rgba(0, 0, 0, 0.849)
+ }
+
+ body p span {
+     font-size: 17.5px;
+ }
+
+ .navbar-brand::before {
+     display: none;
+ }
+
+ .navbar-brand img {
+     display: block;
+     max-height: 40px;
+ }
+
+ .probootstrap-service-2 {
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     background: #f8f9fa;
+     margin-bottom: 20px;
+     text-align: center;
+     width: 100%;
+     max-width: 400px;
+     /* প্রতিটি Card এর Width ঠিক রাখার জন্য */
+ }
+
+ .probootstrap-service-2 .text {
+     text-align: center;
+ }
+
+ .btn-primary {
+     border-radius: 20px;
+     font-weight: bold;
+ }
+
+ #jabbar {
+     margin-left: 5%;
+ }
+
+ .probootstrap-teacher {
+     height: 245px;
+ }
+
+ .swal2-popup {
+     font-size: 18px !important;
+     /* ফন্ট বড় করবে */
+ }
+
+ .swal2-title {
+     font-size: 22px !important;
+     /* শিরোনামের ফন্ট বড় করবে */
+ }
+
+ .swal2-content {
+     font-size: 18px !important;
+     /* মেসেজের ফন্ট বড় করবে */
+ }
+
+ .swal2-confirm {
+     font-size: 16px !important;
+     /* বাটনের ফন্ট বড় করবে */
+     padding: 10px 20px !important;
+ }
+
+ .card {
+     border: 1px solid #ddd;
+     padding: 15px;
+     margin: 10px;
+     border-radius: 10px;
+     background-color: #ffffff;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .card img {
+     border-radius: 8px;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ .owl-carousel .item {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     /* Or 'center' based on your requirement */
+ }
+
+ .card-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     /* Ensure space between title, text, and button */
+     min-height: 200px;
+     /* Adjust height as needed */
+ }
+
+ .card-text {
+     overflow: hidden;
+     /* Hide overflowed text */
+     text-overflow: ellipsis;
+     white-space: nowrap;
+ }

@@ -18,7 +18,7 @@ Edit Notice
         <input class="form-control" type="text" name="notice_headline" value="{{ $notice->notice_headline }}" required><br><br>
 
         <label>বিস্তারিত নোটিশ</label>
-        <textarea class="form-control" name="notice" cols="10" rows="10" required>{{ !! $notice->notice !!}} </textarea><br><br>
+        <textarea class="form-control" name="notice" cols="10" rows="10" required>{{  $notice->notice }} </textarea><br><br>
 
         <label>বর্তমান ছবি:</label><br>
         @if ($notice->notice_image)
