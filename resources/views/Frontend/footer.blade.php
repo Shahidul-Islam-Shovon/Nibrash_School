@@ -130,23 +130,41 @@
       </footer>
 
     </div>
-    <!-- END wrapper -->
-  
-    <!-- Bootstrap 4 এর জন্য প্রয়োজনীয় jQuery এবং JS -->
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<!-- Bootstrap এবং Owl Carousel এর জন্য প্রয়োজনীয় JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- কাস্টম স্ক্রিপ্ট -->
+<script src="{{asset('frontend/js/scripts.min.js')}}"></script>
+<script src="{{asset('frontend/js/main.min.js')}}"></script>
+<script src="{{asset('frontend/js/custom.js')}}"></script>
 
-    <script src="{{asset('frontend/js/scripts.min.js')}}"></script>
-    <script src="{{asset('frontend/js/main.min.js')}}"></script>
-    <script src="{{asset('frontend/js/custom.js')}}"></script>
-
-    <script>
+<script>
     $(document).ready(function () {
+        $('#owl1, #owl2').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+        // ভর্তি ফর্ম সাবমিশন হ্যান্ডলিং
         $("#admissionForm").submit(function (event) {
             event.preventDefault();
             var formData = new FormData(this);
@@ -159,7 +177,7 @@
                 contentType: false,
                 success: function (response) {
                     Swal.fire({
-                        title: "🎉 সফল!",
+                        title: "সফল হয়েছে!",
                         text: "আপনার ভর্তি আবেদন সফলভাবে জমা হয়েছে!",
                         icon: "success",
                         confirmButtonText: "ঠিক আছে",
@@ -179,26 +197,6 @@
             });
         });
     });
-
-    document.querySelector('.navbar-brand::before')?.remove();
-
-    $('#owl1').owlCarousel({
-    loop: true,
-    margin: 10,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 2
-        },
-        1000: {
-            items: 3
-        }
-    },
-    autoHeight: true,  // This can help with varying content heights
-});
-
 </script>
 
 </body>

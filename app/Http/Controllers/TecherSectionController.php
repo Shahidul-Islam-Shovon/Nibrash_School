@@ -27,7 +27,7 @@ class TecherSectionController extends Controller
 
         if($request->hasFile('teacher_image')){
             $image = $request->file('teacher_image');
-            $imageName = time(). '' .$image->getClientOriginalExtension();
+            $imageName = time(). '.' .$image->getClientOriginalExtension();
             $image->move(public_path('storage/Teachers'), $imageName);
             $manage_teacher->teacher_image = $imageName;
         }
@@ -47,6 +47,6 @@ class TecherSectionController extends Controller
     }
 
     public function destroy_teacher($encryptedId){
-
+        
     }
 }

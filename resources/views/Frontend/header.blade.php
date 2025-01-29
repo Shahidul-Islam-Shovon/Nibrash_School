@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>নিবরাস স্কুল</title>
     <link rel="shortcut icon" href="{{asset('frontend/img/nibras_logo.jpg')}}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
-  
     <link rel="stylesheet" href="{{asset('frontend/css/styles-merged.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/all_inline.css')}}">
-    <style>
-        
 
+    <style>
+        /* অতিরিক্ত কার্ড ডিজাইন ঠিক করতে কাস্টম স্টাইল */
+        .owl-carousel .card {
+            min-height: 460px;
+            max-width: 320px;
+        }
+        .owl-carousel .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
     </style>
   </head>
+
   <body>
     
     <div class="probootstrap-page-wrapper">
@@ -129,7 +134,7 @@
                 <div class="probootstrap-text probootstrap-animate">
                   <h3>স্কুল সম্পর্কে</h3>
                   <p>
-                    নিবরাস একটি আধুনিক মান সম্মত ইসলামি শরিয়াহ মোতাবেক স্কুল। এখানে ইলমে দ্বীন এবং প্রচলিত ধারার শিক্ষা দুটুই শিক্ষা দেয়া হয়। আমাদের আছেন অভিজ্ঞ শিক্ষক, যারা হাতে ধরে আমাদের প্রিয় শিক্ষার্থীদের পাঠদান করে থাকেন।
+                    নিবরাস একটি আধুনিক মান সম্মত ইসলামি শরিয়াহ মোতাবেক স্কুল। এখানে ইলমে দ্বীন এবং প্রচলিত ধারার শিক্ষা দেয়া হয়। আমাদের আছেন অভিজ্ঞ শিক্ষক, যারা হাতে ধরে আমাদের প্রিয় শিক্ষার্থীদের পাঠদান করে থাকেন।
                   </p>
                  
                    <button type="button" class="btn btn-outline-dark btn-primary" data-toggle="modal" data-target="#admissionModal">

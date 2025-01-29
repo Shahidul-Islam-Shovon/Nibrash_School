@@ -62,6 +62,8 @@
         </div>
       </section>
 
+
+
       <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/slider_2.jpg)">
         <div class="container">
           <div class="row">
@@ -86,34 +88,29 @@
             <div class="col-md-12">
               <div class="tab-content">
                 <div id="featured-news" class="tab-pane fade in active">
-
                   <div class="row">
                     <div class="col-md-12">
                         <div class="owl-carousel" id="owl1">
                             @foreach($all_notice as $notice)
-                                <div class="card shadow-lg rounded-lg" style="min-height: 400px; max-width: 320px; margin: 10px;">
-                                    {{-- Image Section --}}
-                                    @if(!empty($notice->notice_image))
-                                        <img src="{{ asset('storage/Images/' . $notice->notice_image) }}" alt="Notice Image" class="card-img-top" style="max-height: 180px; object-fit: cover;">
-                                    @else
-                                        <div class="text-center p-4 bg-light">কোন ছবি আপলোড করা হয় নি</div>
-                                    @endif
+                                <div class="card shadow-lg rounded-lg" style="height: 100%; max-width: 320px; margin: 10px;">
+                                {{-- Image Section --}}
+                                @if(!empty($notice->notice_image))
+                                    <img src="{{ asset('storage/Images/' . $notice->notice_image) }}" alt="Notice Image" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                @else
+                                    <div class="text-center p-4 bg-light" style="height: 180px;">কোন ছবি আপলোড করা হয় নি</div>
+                                @endif
 
-                                    {{-- Card Body Section --}}
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title" style="font-size: 18px; margin-top:25px;">{{ $notice->notice_headline }}</h5>
-                                        
-                                        <p class="card-text text-muted mb-3">
-                                            {{ Str::limit($notice->notice, 80) }}
-                                        </p>
-
-                                        <a href="{{ route('see_page.notices.single', encrypt($notice->id)) }}#notice-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
-
-                                        <small style="margin-top: 18px;" class="text-muted mt-2 d-block">
-                                            প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }} তারিখে
-                                        </small>
-                                    </div>
+                                {{-- Card Body Section --}}
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <p class="card-title" style="font-size: 18px; margin-top:17px;">{{ $notice->notice_headline }}</p>
+                                    <p class="card-text text-muted mb-3">{{ Str::limit($notice->notice, 80) }}</p>
+                                    <a href="{{ route('see_page.notices.single', encrypt($notice->id)) }}#notice-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
+                                    <small style="" class="text-muted mt-2 d-block">
+                                        প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }}
+                                    </small>
                                 </div>
+                            </div>
+
                             @endforeach
                         </div>
                     </div>
@@ -265,8 +262,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="probootstrap-teacher text-center probootstrap-animate">
 
-                <figure class="media">
-                  <img src="{{asset('storage/Teachers/'. $teacher->teacher_image)}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive" width="400" height="400">
+                <figure>
+                  <img style="width:100px; height:100px; margin:10px auto" src="{{asset('storage/Teachers/'. $teacher->teacher_image)}}" alt="teacher image" class="img-responsive" width="400" height="400">
                 </figure>
 
                 <div class="text">
@@ -274,7 +271,7 @@
                   <p>{{$teacher->designation}}</p>
                   <ul class="probootstrap-footer-social">
                     
-                    <li class="facebook"><a href="{{$teacher->facebook_link}}">ফেইসবুকঃ<i class="icon-facebook2"></i></a></li>
+                    <li class="facebook"><a href="{{$teacher->facebook_link}}">ফেইসবুক <i class="icon-facebook2"></i></a></li>
                     
                   </ul>
                 </div>
