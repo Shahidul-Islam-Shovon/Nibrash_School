@@ -63,26 +63,24 @@
       </section>
 
 
-
-      <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/slider_2.jpg)">
+   {{-- notice and event start --}}
+       <section id="backToHome" class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/slider_2.jpg)">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center section-heading probootstrap-animate">
-              <h2 class="mb0">আমাদের কার্যক্রম</h2>
-              <br>
-              <h4 style="color:white" class="col-md-12 text-center section-heading probootstrap-animate">নোটিশ বোর্ড এবং ইভেন্ট'স সমূহ</h4>
+              <h2 class="mb0">আমাদের নোটিশ এবং অনুষ্ঠান সমূহ</h2>
             </div>
           </div>
         </div>
         <div class="probootstrap-tab-style-1">
           <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
-            <li class="active"><a data-toggle="tab" href="#featured-news">নোটিশ বোর্ড</a></li>
-            <li><a data-toggle="tab" href="#upcoming-events">ইভেন্ট'স সমূহ </a></li>
+            <li class="active"><a data-toggle="tab" href="#featured-news">নোটিশ সমূহ</a></li>
+            <li><a data-toggle="tab" href="#upcoming-events">অনুষ্ঠান সমূহ</a></li>
           </ul>
         </div>
       </section>
 
-      <section id="backToHome" class="probootstrap-section probootstrap-section">
+      <section class="probootstrap-section probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -90,72 +88,86 @@
                 <div id="featured-news" class="tab-pane fade in active">
                   <div class="row">
                     <div class="col-md-12">
-                        <div class="owl-carousel" id="owl1">
-                            @foreach($all_notice as $notice)
-                                <div class="card shadow-lg rounded-lg" style="height: 100%; max-width: 320px; margin: 10px;">
-                                {{-- Image Section --}}
-                                @if(!empty($notice->notice_image))
-                                    <img src="{{ asset('storage/Images/' . $notice->notice_image) }}" alt="Notice Image" class="card-img-top" style="height: 180px; object-fit: cover;">
-                                @else
-                                    <div class="text-center p-4 bg-light" style="height: 180px;">কোন ছবি আপলোড করা হয় নি</div>
-                                @endif
+                      <div class="owl-carousel" id="owl1">
 
-                                {{-- Card Body Section --}}
-                                <div class="card-body d-flex flex-column justify-content-between">
-                                    <p class="card-title" style="font-size: 18px; margin-top:17px;">{{ $notice->notice_headline }}</p>
-                                    <p class="card-text text-muted mb-3">{{ Str::limit($notice->notice, 80) }}</p>
-                                    <a href="{{ route('see_page.notices.single', encrypt($notice->id)) }}#notice-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
-                                    <small style="" class="text-muted mt-2 d-block">
-                                        প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }}
-                                    </small>
+                         @foreach($all_notice as $notice)
+                        <div class="card">
+                            <div class="item">
+                              <div class="card-body">
+                                <figure class="probootstrap-media">
+                                    @if(!empty($notice->notice_image))
+                                <img src="{{ asset('storage/Images/' . $notice->notice_image) }}" alt="notice Image" class="card-img" style="height: 180px; object-fit: cover; width:255px;">
+                              @else
+                                <div class="text-center p-4 bg-light" style="height: 180px;">
+                                  <small class="text-muted">কোন ছবি আপলোড করা হয় নি</small>
                                 </div>
-                            </div>
+                              @endif
+                            </figure>
+                            
+                            <div class="probootstrap-text">
+                              <p style="font-size: 19px; margin-top:25px;">{{$notice->notice_headline}}</p>
+                              <p>{{Str::limit($notice->notice, 50)}}</p>
 
-                            @endforeach
+                              <span class="probootstrap-date">প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($notice->created_at)->translatedFormat('d F, Y') }}</span>
+
+                             <a href="{{ route('see_page.notices.single', encrypt($notice->id)) }}#notice-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
+                              </div>
+                            </div>                      
                         </div>
+                        </div>
+                        @endforeach 
+
+                      </div>
                     </div>
+                  </div>
                 </div>
 
-                </div>
 
                 <div id="upcoming-events" class="tab-pane fade">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="owl-carousel" id="owl2">
-                        {{-- start item --}}
-                      
                         @foreach($all_events as $event)
-                        <div class="item">
-                          <a href="#" class="probootstrap-featured-news-box">
-                            <figure class="probootstrap-media"><img src="{{asset('storage/Events/'. $event->event_image)}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-
+                        <div class="card">
+                            <div class="item">
+                              <div class="card-body">
+                                <figure class="probootstrap-media">
+                                    @if(!empty($event->event_image))
+                                <img src="{{ asset('storage/Events/' . $event->event_image) }}" alt="event Image" class="card-img" style="height: 180px; object-fit: cover; width:255px;">
+                              @else
+                                <div class="text-center p-4 bg-light" style="height: 180px;">
+                                  <small class="text-muted">কোন ছবি আপলোড করা হয় নি</small>
+                                </div>
+                              @endif
+                            </figure>
+                            
                             <div class="probootstrap-text">
-                              <h3><b>{{$event->event_headline}}</b></h3>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>{{ \Carbon\Carbon::parse($event->created_at)->translatedFormat('d F, Y') }}</span>
-                            </div>
-                          </a>
+                              <p style="font-size: 19px; margin-top:25px;">{{$event->event_headline}}</p>
+                              <p>{{Str::limit($event->event, 50)}}</p>
+
+                              <span class="probootstrap-date">প্রকাশিতঃ <i class="icon-calendar"></i> {{ \Carbon\Carbon::parse($event->created_at)->translatedFormat('d F, Y') }}</span>
+
+                             <a href="{{ route('see_page.events.single', encrypt($event->id)) }}#event-section" class="btn btn-primary mt-auto">বিস্তারিত দেখুন</a>
+                              </div>
+                            </div>                      
                         </div>
-                        @endforeach
-                        <!-- END item -->                      
+                        </div>
+                        @endforeach 
+
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">সকল ইভেন্ট দেখুন</a></p>  
-                    </div>
-                  </div>
+                  </div>                 
                 </div>
 
-              </div>
-            
+              </div>           
             </div>
           </div>
         </div>
       </section>
+   {{-- notice and event end --}}
 
-    
-        <section id="jabbar" class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+
+<section id="jabbar" class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
     <div class="container">
         <div class="row justify-content-center"> <!-- Centering the row -->
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
@@ -379,5 +391,5 @@
           <!-- END row -->
         </div>
       </section>
-      
+    
 @include('Frontend.footer')

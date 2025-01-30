@@ -84,22 +84,6 @@
      scroll-behavior: smooth;
  }
 
- .owl-carousel .item {
-     display: flex;
-     justify-content: center;
-     align-items: flex-start;
-     /* Or 'center' based on your requirement */
- }
-
- .card-body {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     /* Ensure space between title, text, and button */
-     min-height: 200px;
-     /* Adjust height as needed */
- }
-
  .card-text {
      overflow: hidden;
      /* Hide overflowed text */

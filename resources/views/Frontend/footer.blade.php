@@ -91,10 +91,8 @@
               <div class="probootstrap-footer-widget">
                 <h3>গুরুত্বপূর্ণ লিঙ্ক</h3>
                 <ul>
-                  <li><a href="#">হোম</a></li>
-                  <li><a href="#">শিক্ষকসমূহ</a></li>
-                  <li><a href="#">নোটিশ</a></li>
-                  <li><a href="#">ইভেন্ট'স</a></li>
+                  <li><a href="{{route('front')}}">হোম</a></li>
+                  <li><a href="{{route('see_page.teachers')}}">শিক্ষকসমূহ</a></li>
                   <li><a href="#">যোগাযোগ</a></li>
                 </ul>
               </div>
@@ -143,28 +141,8 @@
 <script src="{{asset('frontend/js/custom.js')}}"></script>
 
 <script>
-    $(document).ready(function () {
-        $('#owl1, #owl2').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
 
-        // ভর্তি ফর্ম সাবমিশন হ্যান্ডলিং
+        // Form submission Handling
         $("#admissionForm").submit(function (event) {
             event.preventDefault();
             var formData = new FormData(this);
@@ -195,8 +173,8 @@
                     });
                 }
             });
-        });
-    });
+        });       
+      
 </script>
 
 </body>

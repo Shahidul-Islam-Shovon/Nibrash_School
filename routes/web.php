@@ -62,9 +62,10 @@ Route::get('/teacher/edit/form/{id}', [TecherSectionController::class, 'edit_for
 
 Route::delete('/teacher/trash/{id}', [TecherSectionController::class, 'destroy_teacher'])->name('teacher.destroy'); 
 
-
 // inside page linking 
 
-Route::get('/teachers-list/all', [InsidePageManageController::class, 'see_page_teacher'])->name('see_page.teachers');
+Route::get('/Teachers-list/all', [InsidePageManageController::class, 'see_page_teacher'])->name('see_page.teachers');
 
-Route::get('/notice/single/{id}', [InsidePageManageController::class, 'single_notice'])->name('see_page.notices.single');
+Route::get('/Notice/single/{id}', [InsidePageManageController::class, 'single_notice'])->name('see_page.notices.single');
+
+Route::get('/Events/single/{id}', [InsidePageManageController::class, 'single_events'])->name('see_page.events.single');

@@ -17,15 +17,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/all_inline.css')}}">
 
     <style>
-        /* অতিরিক্ত কার্ড ডিজাইন ঠিক করতে কাস্টম স্টাইল */
-        .owl-carousel .card {
-            min-height: 460px;
-            max-width: 320px;
-        }
-        .owl-carousel .card-img-top {
-            height: 180px;
-            object-fit: cover;
-        }
+       
     </style>
   </head>
 
