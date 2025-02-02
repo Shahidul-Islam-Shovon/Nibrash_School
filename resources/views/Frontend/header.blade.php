@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{asset('frontend/css/styles-merged.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
@@ -29,7 +31,7 @@
       <div class="probootstrap-header-top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+            <div style="margin-top: 15px;font-size:16px;" class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
               <span><i class="icon-location2"></i><b>কাশীপুর ঢালিবাড়ী, ফতুল্লা, নারায়নগঞ্জ</b></span>
               <span><i class="icon-phone2"></i><b>+8801780-711678</b></span>
               <span><i class="icon-mail"></i><b>nibrasschool2024@gmail.com</b></span>
@@ -62,8 +64,13 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="{{route('front')}}">হোম</a></li>
               <li><a href="{{route('see_page.teachers')}}">শিক্ষকসমূহ</a></li>
-              <li><a href="events.html">যোগাযোগ</a></li>
-            </ul>
+              <li><a href="#">যোগাযোগ</a></li>
+               @auth
+                  <li><a href="{{ route('back') }}">Dashboard</a></li>
+              @else
+                  <li><a href="{{ route('login') }}">Admin Login</a></li>
+              @endauth
+                 </ul>
           </div>
         </div>
       </nav>
@@ -76,7 +83,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গড়ে তোলাই আমাদের মিশন</h1>
+                    <h1 class="probootstrap-heading probootstrap-animate">শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গড়ে তোলাই আমাদের লক্ষ্য</h1>
                   </div>
                 </div>
               </div>

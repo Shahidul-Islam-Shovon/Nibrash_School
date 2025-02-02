@@ -15,7 +15,16 @@ Auth::routes();
 
 Route::get('/', [FrontEndController::class, 'front_end_index'])->name('front');
 
-Route::get('/home', [BackendController::class, 'back_end_index'])->name('back');
+Route::get('/admin/dashboard', [BackendController::class, 'back_end_index'])->name('back')->middleware('auth');
+
+// for login
+
+Route::get('/login', function () {
+    if (Auth::check()) {
+        return redirect()->route('back')->with('message', 'আপনি ইতোমধ্যে লগিন অবস্থায় আছেন');
+    }
+    return view('auth.login');
+})->name('login');
 
 // fetured news
 Route::get('/featured-news', [FeaturedNewsController::class, 'show_form'])->name('featured_news.form');

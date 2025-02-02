@@ -47,7 +47,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="{{url('/home')}}" class="text-nowrap logo-img">
+          <a href="{{url('/admin/dashboard')}}" class="text-nowrap logo-img">
             <img src="{{asset('backend/images/logos/logos.jpg')}}" width="130" style="margin-top: 10px;" alt="nibras logo here" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -62,12 +62,13 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('/home')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('/admin/dashboard')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">ড্যাসবোর্ড</span>
               </a>
+              
             </li>
 
             <li class="sidebar-item">
